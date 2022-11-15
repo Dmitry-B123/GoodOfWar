@@ -1,0 +1,83 @@
+//burger
+.btn-burger {
+   position: relative;
+
+   width: 2.5rem;
+   height: 1.6rem;
+   padding: 0;
+
+   background-color: inherit;
+
+   &:hover span,
+   &:active span,
+   &:focus span {
+      width: 25px;
+      transition: all 0.2s linear;
+   }
+
+   &:hover::after,
+   &:active::after,
+   &:focus::after,
+   &:hover::before,
+   &:active::before,
+   &:focus::before {
+      width: 12px;
+      transition: all 0.2s linear;
+   }
+
+   span {
+      display: block;
+      width: 12px;
+      height: 2px;
+
+      background: #ffffff;
+   }
+
+   &::after,
+   &::before {
+      position: absolute;
+      left: 0;
+
+      content: "";
+      display: block;
+      width: 25px;
+      height: 2px;
+
+      background: #ffffff;
+   }
+
+   &::after {
+      top: 0;
+   }
+
+   &::before {
+      bottom: 0;
+   }
+}
+
+//button
+.btn {
+   padding: 1.2rem 3.6rem;
+
+   font-weight: 500;
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   text-transform: uppercase;
+   color: $fontColor1;
+   cursor: pointer;
+
+   border-radius: 6px;
+   background-color: $decorColor;
+
+   &:hover,
+   &:focus {
+      background-color: lighten($decorColor, 10%);
+   }
+}
+
+.btn-small {
+   padding: 0.8rem 1.8rem;
+
+   font-size: 1.3rem;
+   line-height: 1.5rem;
+}

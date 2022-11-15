@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   outline: none;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   background-color: $bgColor;
+   font-family: "Rubik", sans-serif;
+   font-weight: 400;
+   font-size: 1.6rem;
+   color: $fontColor1;
+}
+
+a {
+   text-decoration: none;
+   color: $fontColor1;
+}
+
+li {
+   list-style: none;
+}
+
+ul {
+   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
+p {
+   margin: 0;
+}
+
+nav {
+   margin: 0;
+}
+
+button,
+input {
+   border: none;
+   outline: none;
+}
+
+.container {
+   max-width: 1420px;
+   width: 100%;
+   margin: 0 auto;
+
+   @media screen and (max-width: 1450px) {
+      margin: 0 5%;
+   }
+}
+
+.title {
+   margin-bottom: 3.2rem;
+
+   font-weight: 600;
+   font-size: 4rem;
+   line-height: 4.7rem;
+   text-align: center;
+}

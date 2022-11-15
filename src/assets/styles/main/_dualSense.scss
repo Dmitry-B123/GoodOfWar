@@ -1,0 +1,66 @@
+.dualsense {
+   max-width: 920px;
+   margin: 0 auto 9.2rem;
+   display: grid;
+   grid-template-columns: repeat(10, 1fr);
+   align-items: center;
+
+   .dualsense__title {
+      grid-column: 1/11;
+   }
+
+   .dualsense__info {
+      grid-column: 1/6;
+
+      .dualsense__description {
+         font-size: 1.8rem;
+         line-height: 2.7rem;
+         color: #a9c7c7;
+
+         .violet {
+            color: $fontColor3;
+            font-weight: 500;
+         }
+
+         .red {
+            color: red;
+         }
+      }
+
+      .dualsense__description:nth-child(2) {
+         margin-top: 2.2rem;
+         margin-bottom: 2.7rem;
+      }
+
+      .dualsense__price {
+         font-weight: 700;
+         font-size: 3rem;
+         line-height: 3.6rem;
+      }
+
+      .btn-red {
+         background-color: red;
+         margin-left: 3.3rem;
+
+         &:hover,
+         &:focus {
+            background-color: lighten(red, 10%);
+         }
+      }
+   }
+
+   .dualsense__gadjet {
+      grid-column: 8/11;
+
+      animation: gadjet 0.7s alternate linear infinite;
+   }
+}
+
+@keyframes gadjet {
+   0% {
+      transform: translateY(2rem);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}

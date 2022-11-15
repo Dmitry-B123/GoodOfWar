@@ -1,0 +1,14 @@
+// normalize.css
+@import "normalize";
+
+@import "var";
+@import "mixins";
+@import "fonts";
+@import "general";
+@import "button";
+
+//blocks
+@import "header/header";
+@import "main/editions";
+@import "main/dualSense";
+@import "main/about";
