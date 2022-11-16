@@ -1,0 +1,113 @@
+.explore {
+   max-width: 95rem;
+   margin: 0 auto 17rem;
+}
+
+.explore__block {
+   .explore__block-title {
+      margin-bottom: 2.1rem;
+
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      text-align: center;
+   }
+
+   // explore__switch
+   .explore__switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .explore__switch-min,
+      .explore__switch-max {
+         font-weight: 400;
+         font-size: 1.4rem;
+         line-height: 1.7rem;
+         color: #30373f;
+      }
+
+      .explore__switch-active {
+         color: $fontColor1;
+      }
+
+      .switch-1,
+      .switch-2 {
+         position: relative;
+
+         display: block;
+         width: 5.4rem;
+         height: 2.6rem;
+
+         background: #30373f;
+         border-radius: 12px;
+
+         .switch-checkbox {
+            display: none;
+
+            &:checked + span {
+               right: 4px;
+               left: inherit;
+            }
+         }
+
+         span {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+
+            width: 1.8rem;
+            height: 1.8rem;
+
+            background: #8856d9;
+            border-radius: 50%;
+         }
+      }
+   }
+
+   // explore__info
+
+   .explore__info {
+      display: flex;
+      justify-content: start;
+      gap: 0;
+
+      &-2 {
+         flex-direction: row-reverse;
+         gap: 10rem;
+         margin-top: -5rem;
+      }
+   }
+
+   .explore__img {
+      margin-right: -5rem;
+      margin-top: -5rem;
+   }
+
+   .explore__description {
+      display: grid;
+      align-content: end;
+      gap: 2.8rem;
+   }
+
+   .explore__description-item {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 3.6rem;
+
+      .violet {
+         color: #8856d9;
+         text-transform: uppercase;
+      }
+   }
+
+   .btn {
+      margin-left: 0;
+      justify-self: start;
+   }
+}
+
+.explore__block-system {
+   margin-top: 10rem;
+}

@@ -81,3 +81,13 @@
    font-size: 1.3rem;
    line-height: 1.5rem;
 }
+
+.btn-red {
+   background-color: red;
+   margin-left: 3.3rem;
+
+   &:hover,
+   &:focus {
+      background-color: lighten(red, 10%);
+   }
+}

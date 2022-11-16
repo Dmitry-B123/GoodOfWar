@@ -37,16 +37,6 @@
          font-size: 3rem;
          line-height: 3.6rem;
       }
-
-      .btn-red {
-         background-color: red;
-         margin-left: 3.3rem;
-
-         &:hover,
-         &:focus {
-            background-color: lighten(red, 10%);
-         }
-      }
    }
 
    .dualsense__gadjet {
