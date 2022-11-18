@@ -42,15 +42,12 @@
             line-height: 2.4rem;
             color: $fontColor1;
          }
-
-         &:active::after {
-            transform: rotate(45deg);
-         }
       }
    }
 
    .accordion__description {
       padding: 0 0 3.6rem;
+      display: none;
 
       font-size: 1.4rem;
       line-height: 1.7rem;
@@ -58,5 +55,13 @@
       span {
          color: red;
       }
+   }
+
+   .accordion__block.opened + .accordion__description {
+      display: block;
+   }
+
+   .accordion__block.opened .accordion__btn::after {
+      transform: rotate(45deg);
    }
 }

@@ -26,14 +26,13 @@
          font-size: 1.4rem;
          line-height: 1.7rem;
          color: #30373f;
+
+         &.active {
+            color: $fontColor1;
+         }
       }
 
-      .explore__switch-active {
-         color: $fontColor1;
-      }
-
-      .switch-1,
-      .switch-2 {
+      .switch {
          position: relative;
 
          display: block;
@@ -75,6 +74,7 @@
 
       &-2 {
          flex-direction: row-reverse;
+         justify-content: space-between;
          gap: 10rem;
          margin-top: -5rem;
       }
@@ -85,10 +85,22 @@
       margin-top: -5rem;
    }
 
+   .explore__img-2 {
+      margin-right: 10rem;
+   }
+
    .explore__description {
       display: grid;
       align-content: end;
       gap: 2.8rem;
+   }
+
+   .explore__description-block {
+      display: none;
+
+      &.active {
+         display: block;
+      }
    }
 
    .explore__description-item {
