@@ -15,6 +15,11 @@
    position: relative;
 }
 
+.slick-track {
+   display: flex;
+   align-items: center;
+}
+
 .news__swiper-left,
 .news__swiper-right {
    position: absolute;
@@ -28,16 +33,33 @@
 
    background: $fontColor2;
    border-radius: 6px;
+
+   @media screen and (max-width: 670px) {
+      bottom: -20%;
+      top: inherit;
+   }
+
+   @media screen and (max-width: 550px) {
+      bottom: -15%;
+   }
 }
 
 .news__swiper-left {
-   left: 0;
+   left: 10%;
    transform: translate(2rem, -2rem);
+
+   @media screen and (max-width: 670px) {
+      left: 30%;
+   }
 }
 
 .news__swiper-right {
-   right: 0;
+   right: 10%;
    transform: translate(-2rem, -2rem);
+
+   @media screen and (max-width: 670px) {
+      right: 30%;
+   }
 }
 
 //slider
@@ -83,6 +105,10 @@
    .news__slide-block {
       display: flex;
       gap: 2.4rem;
+
+      @media screen and (max-width: 500px) {
+         flex-direction: column;
+      }
 
       img {
          border-radius: 6px;

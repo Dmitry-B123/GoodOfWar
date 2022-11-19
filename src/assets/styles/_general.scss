@@ -70,6 +70,13 @@ input {
    font-size: 4rem;
    line-height: 4.7rem;
    text-align: center;
+
+   @media screen and (max-width: 500px) {
+      margin-bottom: 2.2rem;
+
+      font-size: 3rem;
+      line-height: 3.7rem;
+   }
 }
 
 main {

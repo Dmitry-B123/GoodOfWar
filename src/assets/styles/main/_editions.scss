@@ -8,6 +8,10 @@
    justify-content: center;
    gap: 1.6rem;
 
+   @media screen and (max-width: 825px) {
+      flex-wrap: wrap;
+   }
+
    .editions__card {
       padding: 1.7rem;
       display: flex;
@@ -73,6 +77,9 @@
          margin-top: 1.4rem;
          margin-bottom: 1.6rem;
          align-self: flex-end;
+
+         @media screen and (max-width: 580px) {
+         }
       }
    }
 }

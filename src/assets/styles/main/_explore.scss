@@ -1,6 +1,10 @@
 .explore {
    max-width: 95rem;
    margin: 0 auto 17rem;
+
+   @media screen and (max-width: 500px) {
+      margin-bottom: 5rem;
+   }
 }
 
 .explore__block {
@@ -19,6 +23,11 @@
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
+      z-index: 3;
+
+      @media screen and (max-width: 400px) {
+         margin-bottom: 2rem;
+      }
 
       .explore__switch-min,
       .explore__switch-max {
@@ -72,21 +81,43 @@
       justify-content: start;
       gap: 0;
 
+      @media screen and (max-width: 750px) {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+
       &-2 {
          flex-direction: row-reverse;
          justify-content: space-between;
          gap: 10rem;
          margin-top: -5rem;
+
+         @media screen and (max-width: 750px) {
+            margin-top: 0;
+            justify-content: center;
+            gap: 0;
+         }
       }
    }
 
    .explore__img {
       margin-right: -5rem;
       margin-top: -5rem;
+      z-index: -1;
+
+      @media screen and (max-width: 750px) {
+         width: 50%;
+      }
    }
 
    .explore__img-2 {
       margin-right: 10rem;
+      z-index: -1;
+
+      @media screen and (max-width: 750px) {
+         width: 30%;
+         margin-right: 0;
+      }
    }
 
    .explore__description {

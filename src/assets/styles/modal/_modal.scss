@@ -23,12 +23,17 @@
    right: 50%;
    transform: translate(50%, -50%);
 
-   max-width: 47rem;
+   width: 47rem;
    min-height: 56.5rem;
    padding: 3.2rem;
 
    background: linear-gradient(180deg, #30373f 0%, #000000 99.82%);
    border-radius: 12px;
+
+   @media screen and (max-width: 600px) {
+      width: 100%;
+      max-width: 47rem;
+   }
 
    &::after {
       position: absolute;

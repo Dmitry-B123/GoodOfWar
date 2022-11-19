@@ -125,14 +125,14 @@ $(document).ready(function () {
       nextArrow: $('.swiper-button-next'),
       responsive: [
          {
-            breakpoint: 1500,
+            breakpoint: 1600,
             settings: {
                slidesToShow: 2,
                slidesToScroll: 1
             }
          },
          {
-            breakpoint: 1000,
+            breakpoint: 1100,
             settings: {
                slidesToShow: 1,
                slidesToScroll: 1
@@ -162,7 +162,7 @@ const sections = document.querySelectorAll('.s');
 const handleScroll = () => {
    const { scrollY: y, innerHeight: h } = window;
    sections.forEach((sec) => {
-      if (y > sec.offsetTop - h / 1.5) {
+      if (y > sec.offsetTop - h / 1.2) {
          sec.classList.add(classes.hidden);
       } else if (y < sec.offsetTop - h) {
          sec.classList.remove(classes.hidden);
@@ -221,7 +221,7 @@ setTexts();
 
 langs.forEach((lang) => lang.addEventListener("click", toggleLanguage));
 
-// modal 
+// 11 modal 
 const buyButton = document.querySelectorAll(".buy-btn");
 const modal = document.querySelector(".wrapper");
 const modalTitle = document.querySelector(".modal__subtitle");
