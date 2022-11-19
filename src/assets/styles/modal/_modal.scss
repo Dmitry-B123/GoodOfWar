@@ -1,0 +1,182 @@
+.wrapper {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+
+   display: none;
+
+   width: 100vw;
+   height: 100vh;
+
+   background: rgba($bgColor, 0.9);
+
+   &--active {
+      display: block;
+   }
+}
+
+.modal {
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%, -50%);
+
+   max-width: 47rem;
+   min-height: 56.5rem;
+   padding: 3.2rem;
+
+   background: linear-gradient(180deg, #30373f 0%, #000000 99.82%);
+   border-radius: 12px;
+
+   &::after {
+      position: absolute;
+      top: 5%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+
+      content: "";
+      display: block;
+      width: 100%;
+      height: 95%;
+
+      background: url(../images/modal/bg.webp) no-repeat center/contain;
+      opacity: 0.3;
+   }
+
+   // components modal
+   .modal__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      background: #30373f;
+      border: none;
+      color: $fontColor1;
+   }
+
+   .modal__title,
+   .modal__subtitle {
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      text-align: center;
+      color: $fontColor3;
+   }
+
+   .modal__subtitle {
+      color: $fontColor1;
+      display: block;
+      margin-top: 0.7rem;
+      margin-bottom: 1.7rem;
+   }
+
+   // form
+   .form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2.6rem;
+      row-gap: 1.7rem;
+
+      .full,
+      .form__description,
+      .form__summ,
+      .form__btn {
+         grid-column: 1/3;
+      }
+
+      .form__group {
+         label {
+            display: block;
+            margin-bottom: 0.7rem;
+
+            font-size: 1rem;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+         }
+
+         input {
+            width: 100%;
+            padding: 1.5rem;
+
+            background: #30373f;
+            border-radius: 6px;
+            color: $fontColor1;
+
+            &::placeholder {
+               font-size: 1.2rem;
+               line-height: 1.4rem;
+               text-transform: uppercase;
+               color: #d9d9d9;
+            }
+         }
+
+         .form__input-checkbox {
+            display: none;
+
+            &:checked + .form__check-lable::before {
+               content: "✔";
+            }
+         }
+
+         .form__check-lable {
+            position: relative;
+
+            display: inline;
+            margin-left: 4rem;
+
+            font-size: 1rem;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+
+            span {
+               color: red;
+            }
+
+            &::before {
+               position: absolute;
+               left: -4rem;
+               top: -0.6rem;
+
+               content: "";
+               width: 2.5rem;
+               height: 2.5rem;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 1.5rem;
+
+               background: #30373f;
+               border-radius: 6px;
+            }
+         }
+      }
+   }
+
+   .form__description {
+      color: #d9d9d9;
+      font-size: 1rem;
+      line-height: 1.2rem;
+   }
+
+   .form__summ {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-info {
+         font-weight: 500;
+         font-size: 1.4rem;
+         line-height: 1.7rem;
+      }
+
+      &-value {
+         font-weight: 500;
+         font-size: 2rem;
+         line-height: 2.4rem;
+      }
+   }
+}

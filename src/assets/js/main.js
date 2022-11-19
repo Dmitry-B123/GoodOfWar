@@ -220,3 +220,52 @@ const toggleLanguage = ({ target }) => {
 setTexts();
 
 langs.forEach((lang) => lang.addEventListener("click", toggleLanguage));
+
+// modal 
+const buyButton = document.querySelectorAll(".buy-btn");
+const modal = document.querySelector(".wrapper");
+const modalTitle = document.querySelector(".modal__subtitle");
+const modalPrice = document.querySelector(".form__summ-value");
+const modalClose = document.querySelector(".modal__close");
+
+const values = [
+   {
+      price: 19.99,
+      title: "Standard Edition",
+   },
+   {
+      price: 18.99,
+      title: "Standard Edition",
+   },
+   {
+      price: 29.99,
+      title: "Deluxe Edition",
+   },
+   {
+      price: 35.99,
+      title: "DualSense",
+   },
+   {
+      price: 20.99,
+      title: "PC",
+   },
+];
+
+const handleBuyButton = ({ currentTarget: target }) => {
+   const { value } = target.dataset;
+
+   if (!value) return;
+
+   const { price, title } = values[value];
+
+   modalTitle.innerText = title;
+   modalPrice.innerText = `${price}$`;
+   modal.classList.add("wrapper--active");
+};
+
+const closeModal = () => {
+   modal.classList.remove("wrapper--active");
+};
+
+buyButton.forEach((buy) => buy.addEventListener('click', handleBuyButton));
+modalClose.addEventListener('click', closeModal);
